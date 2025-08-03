@@ -20,7 +20,7 @@ namespace WaterWarning
             {
                 if (__runOriginal && __instance is ShipItemLight light && WaterWarning.lanternIndices.Contains(__instance.GetPrefabIndex()))
                 {
-                    __instance.currentActualBoat.parent.GetComponent<WaterWarning>()?.lanterns.Add(light);
+                    __instance.currentActualBoat.parent.GetComponent<WaterWarning>()?.lanterns.Add(light, light.GetComponent<HangableItem>());
                 }
             }
         }
